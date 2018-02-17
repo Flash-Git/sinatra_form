@@ -1,0 +1,19 @@
+<h1>Hello<% unless @name.to_s.empty? %>
+		<%= @name %>
+	<% end %>!
+</h1>
+
+<form action = "/form" method="post">
+	<input type="text" name="name" value="<%= @name %>">
+	<input type="submit" value="Submit">
+</form>
+
+<ul>
+	<% @names.each do |name| %>
+		<li><%= name %></li>
+	<% end %>
+<ul>
+
+<% if @message %>
+	<p><%= @message %></p>
+<% end %>
